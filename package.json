@@ -1,18 +1,33 @@
 {
-    "name": "copy-cat-test",
-    "version": "1.0.0",
-    "description": "",
-    "main": "AddThoughtForm.js",
-    "directories": {
-        "test": "__tests__/"
-    },
-    "scripts": {
-        "test": "jest --coverage"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "regenerator-runtime": "^0.13.7"
-    }
+  "name": "copy-cat-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "AddThoughtForm.js",
+  "directories": {
+    "test": "__tests__/"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "react-scripts start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
