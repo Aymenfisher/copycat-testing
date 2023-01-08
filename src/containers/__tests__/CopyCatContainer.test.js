@@ -1,15 +1,34 @@
+/**
+ * @jest-environment jsdom
+ */
 import { CopyCatContainer } from '../CopyCatContainer'
 import 'regenerator-runtime'
 
 //  Make all the imports below
-
+import React from 'react';
+import {screen,render} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
 
 
 
 
 test('Should display copied text', () => {
     // Write your solution to task 9 within this test
+    //render component
+    render(
+        <CopyCatContainer />
+    )
+    
+    const testValue = 'Hello World!';
 
+    //query the input field and inserting a text into it
+    const input = screen.getByRole('textbox')
+    userEvent.type(input,testValue);
+    //query for the paragraph element
+    const paragraph = screen.getByText(testValue)
+    //assert
+    expect(paragraph).toBeInTheDocument();
 
 })
 
